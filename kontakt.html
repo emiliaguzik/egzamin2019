@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styl.css" />
+    <title>Pogotowie komputerowe</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="banner flex center"></div>
+      <nav class="nav flex center">
+        <ul class="flex center">
+          <li>
+            <a href="index.html">O nas</a>
+          </li>
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main flex center">
+        <div>
+          <h2>Kim jesteśmy?</h2>
+          <p>Jesteśmy firmą z wieloletnim doświadczeniem w zakresie IT</p>
+        </div>
+        <div>
+          <h3>Formularz kontaktowy</h3>
+          <form>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Imię:</td>
+                  <td>
+                    <input pattern="[a-zA-Z]*" type="text" id="name" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nazwisko:</td>
+                  <td>
+                    <input pattern="[a-zA-Z]*" type="text" id="surname" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>E-mail:</td>
+                  <td>
+                    <input type="email" id="email" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Usługa:</td>
+                  <td>
+                    <select id="service">
+                      <option value="naprawa komputera">
+                        naprawa komputera
+                      </option>
+                      <option value="odzyskiwanie danych">
+                        odzyskiwanie danych
+                      </option>
+                      <option value="problemy z oprogramowaniem">
+                        problemy z oprogramowaniem
+                      </option>
+                      <option value="konfiguracja sieci LAN">
+                        konfiguracja sieci LAN
+                      </option>
+                      <option value="inne">inne</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <input type="checkbox" checked />
+                    <label>Wyślij kopię wiadomości</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <input id="reset" type="reset" value="Resetuj" />
+                    <button onclick="output()" type="button" id="send">
+                      Prześlij
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+          <div id="output"></div>
+        </div>
+        <div>
+          <h2>Co nas cechuje?</h2>
+          <p>Doświadczenie, niezawodność, konkurencyjne ceny</p>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Autor strony: <span class="bold">PESEL</span></p>
+      </footer>
+    </div>
+    <script src="skrypt.js"></script>
+  </body>
+</html>
